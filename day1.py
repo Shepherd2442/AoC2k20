@@ -8,10 +8,10 @@ def get_multi(input, quantity):
             return np.prod(item)
 
 def part_1():
-    return get_multi(FileUtils.input(), 2)
+    return get_multi(FileUtils.int_input(), 2)
 
 def part_2():
-    return get_multi(FileUtils.input(), 3)
+    return get_multi(FileUtils.int_input(), 3)
 
 if __name__ == "__main__":
     print( part_1() )
