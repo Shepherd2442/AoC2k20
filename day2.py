@@ -2,10 +2,10 @@ from utils import FileUtils
 
 def is_valid(policy, password):
     character_count = password.count(policy['character'])
-    return True if character_count <= policy['u_bound'] and character_count >= policy['l_bound'] else False
+    return character_count <= policy['u_bound'] and character_count >= policy['l_bound']
 
 def is_valid_index(policy, password):
-    return True if (password[policy['l_bound'] - 1] == policy['character']) != (password[policy['u_bound'] - 1] == policy['character']) else False
+    return (password[policy['l_bound'] - 1] == policy['character']) != (password[policy['u_bound'] - 1] == policy['character'])
 
 def parse_policy(policy):
     bounds, character = policy.split(" ")
